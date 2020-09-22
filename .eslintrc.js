@@ -28,6 +28,7 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
@@ -37,6 +38,7 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+    'react/prop-types': [0],
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
   },
   plugins: ['simple-import-sort'],
