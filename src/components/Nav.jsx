@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import Link from 'next/link'
-import { jsx } from 'theme-ui'
-import { NavLink } from 'theme-ui'
+import { jsx, NavLink } from 'theme-ui'
 
 const Nav = () => (
   <header
