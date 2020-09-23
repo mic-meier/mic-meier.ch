@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { getSortedPostsData } from '../lib/getPostsData'
 
 export const getStaticProps = async () => {
@@ -15,6 +17,9 @@ export default function BlogList({ allPostsData }) {
     <div>
       {allPostsData.map(({ slug, date, title, tagline }) => (
         <div key={slug}>
+          <Link href="posts/[slug]" as={`/posts/${slug}`} key={slug}>
+            <a>{slug}</a>
+          </Link>
           <div>{slug}</div>
           <div>{date}</div>
           <div>{title}</div>

@@ -3,6 +3,7 @@ import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 
 import BlogPost from '../../components/BlogPost'
+import Layout from '../../components/Layout'
 import { getPostData } from '../../lib/getPostsData'
 import { getAllPostSlugs } from '../../lib/getPostsData'
 
@@ -11,11 +12,13 @@ const components = { BlogPost }
 export default function BlogView({ source, frontMatter }) {
   const content = hydrate(source, { components })
   return (
-    <div className="wrapper">
-      <h1>{frontMatter.title}</h1>
-      <p>{frontMatter.date}</p>
-      {content}
-    </div>
+    <Layout title={frontMatter.title}>
+      <div className="wrapper">
+        <h1>{frontMatter.title}</h1>
+        <p>{frontMatter.date}</p>
+        {content}
+      </div>
+    </Layout>
   )
 }
 

@@ -15,6 +15,7 @@ const theme = {
         minWidth: `100%`,
         margin: 0,
         padding: '1rem',
+        borderRadius: '10px',
       },
       highlightLine: {
         backgroundColor: `#45474e`,
@@ -35,6 +36,7 @@ const theme = {
         borderBottomColor: `#f0f0f0`,
         color: nightOwl.plain.color,
         padding: '0.5rem 1rem',
+        borderRadius: '10px',
       },
     },
   },
