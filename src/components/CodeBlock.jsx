@@ -6,52 +6,6 @@ import { jsx, Styled } from 'theme-ui'
 
 import { getShouldHighlightLine } from '../lib/getShouldHighlightLine'
 
-// const CodeBlock = ({ children, className, hl, ...props }) => {
-//   // Pull the className
-//   const language = className.replace(/language-/, '') || ''
-//   const shouldHighlighLine = getShouldHighlightLine(hl)
-
-//   return (
-//     <div sx={{ variant: 'styles.CodeBlock' }}>
-//       <Highlight
-//         {...defaultProps}
-//         {...props}
-//         code={children.trim()}
-//         language={language}
-//         theme={nightOwl}
-//       >
-//         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-//           <pre
-//             className={className}
-//             style={{ ...style }}
-//             sx={{ padding: '1rem', borderRadius: '10px' }}
-//           >
-//             {tokens.map((line, index) => {
-//               const lineProps = getLineProps({ line, key: index })
-//               console.log(index)
-//               return (
-//                 <div
-//                   key={index}
-//                   {...lineProps}
-//                   sx={
-//                     shouldHighlighLine(index)
-//                       ? { variant: `styles.CodeBlock.highlightLine` }
-//                       : undefined
-//                   }
-//                 >
-//                   {line.map((token, key) => (
-//                     <span key={key} {...getTokenProps({ token, key })} />
-//                   ))}
-//                 </div>
-//               )
-//             })}
-//           </pre>
-//         )}
-//       </Highlight>
-//     </div>
-//   )
-// }
-
 const CodeBlock = ({
   children,
   className: outerClassName,
