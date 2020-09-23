@@ -1,7 +1,6 @@
-const BlogPost = ({ children, title }) => {
+const BlogPost = ({ children }) => {
   return (
     <>
-      <h1>{title}</h1>
       <article>{children}</article>
     </>
   )

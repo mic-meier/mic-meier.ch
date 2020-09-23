@@ -1,19 +1,36 @@
 import fs from 'fs'
 import path from 'path'
+import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export const getPostsData = () => {
+export const getSortedPostsData = () => {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
     // Remove '.mdx' from file name to get id
-    const id = fileName.replace(/\.mdx$/, '')
+    const slug = fileName.replace(/\.mdx$/, '')
 
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-    return fileContents
+
+    // Use gray-matter to parse the post metadata section
+    const metadata = matter(fileContents)
+
+    return {
+      slug,
+      ...metadata.data,
+    }
+  })
+
+  // Sort posts by date
+  return allPostsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1
+    } else {
+      return -1
+    }
   })
 }
 
