@@ -26,6 +26,7 @@
     "@theme-ui/presets": "^0.3.0",
     "@theme-ui/prism": "^0.3.0",
     "fs": "0.0.1-security",
+    "gray-matter": "^4.0.2",
     "next": "9.5.3",
     "next-mdx-remote": "^1.0.0",
     "parse-numeric-range": "^1.2.0",
