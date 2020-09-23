@@ -30,6 +30,9 @@ module.exports = {
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/react-in-jsx-scope': 'off',
+    'simple-import-sort/sort': 'error',
+    'sort-imports': 'off',
+    'import/order': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {

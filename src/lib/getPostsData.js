@@ -1,6 +1,6 @@
 import fs from 'fs'
-import path from 'path'
 import matter from 'gray-matter'
+import path from 'path'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -30,6 +30,18 @@ export const getSortedPostsData = () => {
       return 1
     } else {
       return -1
+    }
+  })
+}
+
+export const getAllPostSlugs = () => {
+  const fileNames = fs.readdirSync(postsDirectory)
+
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        slug: fileName.replace(/\.mdx$/, ''),
+      },
     }
   })
 }

@@ -1,10 +1,10 @@
-import renderToString from 'next-mdx-remote/render-to-string'
-import hydrate from 'next-mdx-remote/hydrate'
-
 import matter from 'gray-matter'
+import hydrate from 'next-mdx-remote/hydrate'
+import renderToString from 'next-mdx-remote/render-to-string'
 
 import BlogPost from '../../components/BlogPost'
 import { getPostData } from '../../lib/getPostsData'
+import { getAllPostSlugs } from '../../lib/getPostsData'
 
 const components = { BlogPost }
 
@@ -19,9 +19,17 @@ export default function BlogView({ source, frontMatter }) {
   )
 }
 
-export async function getStaticProps() {
-  const blog = await getPostData('testblog')
-  const source = blog
+export async function getStaticPaths() {
+  const paths = getAllPostSlugs()
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const source = await getPostData(params.slug)
   const { content, data } = matter(source)
   const mdxSource = await renderToString(content, { components, scope: data })
   return { props: { source: mdxSource, frontMatter: data } }
