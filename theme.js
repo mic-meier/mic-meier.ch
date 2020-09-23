@@ -1,8 +1,6 @@
 import { roboto } from '@theme-ui/presets'
 import nightOwl from 'prism-react-renderer/themes/nightOwl'
 
-console.log('nightOwl', nightOwl)
-
 const theme = {
   ...roboto,
   styles: {
