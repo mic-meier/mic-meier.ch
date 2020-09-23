@@ -2,7 +2,6 @@
 import Head from 'next/head'
 import { Container, jsx } from 'theme-ui'
 
-// import Nav from './Nav'
 import NavBar from './NavBar'
 
 const Layout = ({ children, title }) => {
