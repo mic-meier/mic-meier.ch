@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import { Container, jsx } from 'theme-ui'
 
-import Nav from './Nav'
+// import Nav from './Nav'
 
 const Layout = ({ children, title }) => {
   return (
@@ -10,7 +10,7 @@ const Layout = ({ children, title }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <Nav />
+      {/* <Nav /> */}
       <Container p={3} sx={{ maxWidth: '50rem' }}>
         {children}
       </Container>
