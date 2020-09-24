@@ -1,10 +1,10 @@
-import { roboto } from '@theme-ui/presets'
+import { deep } from '@theme-ui/presets'
 import nightOwl from 'prism-react-renderer/themes/nightOwl'
 
 const theme = {
-  ...roboto,
+  ...deep,
   styles: {
-    ...roboto.styles,
+    ...deep.styles,
     CodeBlock: {
       overflow: `auto`,
       pre: {
@@ -40,8 +40,17 @@ const theme = {
   },
   links: {
     nav: {
+      color: 'text',
       '&:hover, &:focus, &.active': {
-        color: 'muted',
+        color: 'highlight',
+      },
+    },
+    blog: {
+      cursor: 'pointer',
+      color: 'primary',
+      '&:hover, &:focus, &.active': {
+        textDecoration: 'underline',
+        color: 'secondary',
       },
     },
   },
@@ -55,7 +64,5 @@ const theme = {
     },
   },
 }
-
-console.log('theme', theme)
 
 export default theme

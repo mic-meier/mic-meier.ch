@@ -2,14 +2,17 @@
 import Link from 'next/link'
 import { Card, jsx } from 'theme-ui'
 
+import DateComponent from './Date'
+
 const Blog = ({ title, date, tagline, slug }) => {
   return (
     <Card>
       <Link href="posts/[slug]" as={`/posts/${slug}`} key={slug}>
-        <a>{slug}</a>
+        <a sx={{ variant: 'links.blog' }}>
+          <h2 sx={{ marginBottom: 0 }}>{title}</h2>
+        </a>
       </Link>
-      <h1>{title}</h1>
-      <p>{date}</p>
+      <DateComponent dateString={date} />
       <p>{tagline}</p>
     </Card>
   )

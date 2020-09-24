@@ -7,9 +7,9 @@ const Nav = () => (
     sx={{
       height: '60px',
       width: '100vw',
-      bg: 'primary',
+      bg: 'muted',
       borderBottom: '1px solid',
-      borderColor: 'primary',
+      borderColor: 'muted',
     }}
   >
     <nav
