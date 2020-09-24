@@ -45,6 +45,17 @@ const theme = {
       },
     },
   },
+  cards: {
+    primary: {
+      padding: 2,
+      borderRadius: 4,
+      boxShadow: (theme) => `0.25rem 0.25rem .75rem ${theme.colors.muted}`,
+      marginBottom: '1rem',
+      marginTop: '2rem',
+    },
+  },
 }
+
+console.log('theme', theme)
 
 export default theme

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import Link from 'next/link'
-import { jsx, NavLink } from 'theme-ui'
+import { jsx } from 'theme-ui'
 
 const Nav = () => (
   <header
@@ -22,31 +22,29 @@ const Nav = () => (
         padding: '0em 1rem',
       }}
     >
-      <Link href="/" passHref>
-        <NavLink>
-          <a
-            sx={{
-              fontWeight: 'bold',
-              fontSize: 4,
-              cursor: 'pointer',
-            }}
-          >
-            Home
-          </a>
-        </NavLink>
+      <Link href="/">
+        <a
+          sx={{
+            fontWeight: 'bold',
+            fontSize: 4,
+            cursor: 'pointer',
+            variant: 'links.nav',
+          }}
+        >
+          Home
+        </a>
       </Link>
-      <Link href="/blog" passHref>
-        <NavLink>
-          <a
-            sx={{
-              fontWeight: 'bold',
-              fontSize: 4,
-              cursor: 'pointer',
-            }}
-          >
-            Blog
-          </a>
-        </NavLink>
+      <Link href="/blog">
+        <a
+          sx={{
+            fontWeight: 'bold',
+            fontSize: 4,
+            cursor: 'pointer',
+            variant: 'links.nav',
+          }}
+        >
+          Blog
+        </a>
       </Link>
     </nav>
   </header>

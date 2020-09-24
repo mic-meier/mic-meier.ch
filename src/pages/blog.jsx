@@ -1,5 +1,5 @@
-import Link from 'next/link'
-
+import Blog from '../components/Blog'
+import Layout from '../components/Layout'
 import { getSortedPostsData } from '../lib/getPostsData'
 
 export const getStaticProps = async () => {
@@ -14,18 +14,16 @@ export const getStaticProps = async () => {
 
 export default function BlogList({ allPostsData }) {
   return (
-    <div>
+    <Layout title="My Blog">
       {allPostsData.map(({ slug, date, title, tagline }) => (
-        <div key={slug}>
-          <Link href="posts/[slug]" as={`/posts/${slug}`} key={slug}>
-            <a>{slug}</a>
-          </Link>
-          <div>{slug}</div>
-          <div>{date}</div>
-          <div>{title}</div>
-          <div>{tagline}</div>
-        </div>
+        <Blog
+          key={slug}
+          slug={slug}
+          date={date}
+          title={title}
+          tagline={tagline}
+        ></Blog>
       ))}
-    </div>
+    </Layout>
   )
 }
