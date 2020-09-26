@@ -2,22 +2,19 @@ import matter from 'gray-matter'
 import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 
-import BlogPost from '../../components/BlogPost'
+import BlogHeader from '../../components/BlogHeader'
 import Layout from '../../components/Layout'
 import { getPostData } from '../../lib/getPostsData'
 import { getAllPostSlugs } from '../../lib/getPostsData'
 
-const components = { BlogPost }
+const components = { BlogHeader }
 
 export default function BlogView({ source, frontMatter }) {
   const content = hydrate(source, { components })
   return (
     <Layout title={frontMatter.title}>
-      <div className="wrapper">
-        <h1>{frontMatter.title}</h1>
-        <p>{frontMatter.date}</p>
-        {content}
-      </div>
+      <BlogHeader title={frontMatter.title} dateString={frontMatter.date} />
+      {content}
     </Layout>
   )
 }

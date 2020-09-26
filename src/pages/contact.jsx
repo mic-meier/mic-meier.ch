@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 export default function Home() {
   return (
     <Layout title="Welcome to my humble abode">
-      <Container p={3} sx={{ maxWidth: '50rem' }}>
+      <Container p={0} sx={{ maxWidth: '50rem' }}>
         <h1>Hello World</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id ipsa
