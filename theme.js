@@ -72,7 +72,7 @@ const theme = {
       },
       px: 2,
       py: 1,
-      margin: '0.5rem',
+      my: '0.5rem',
       textDecoration: 'none',
     },
     blog: {
@@ -86,7 +86,8 @@ const theme = {
   },
   cards: {
     primary: {
-      padding: 2,
+      py: 2,
+      px: 2,
       borderRadius: 4,
       boxShadow: (theme) => `0.25rem 0.25rem .75rem ${theme.colors.muted}`,
       marginBottom: '1rem',
