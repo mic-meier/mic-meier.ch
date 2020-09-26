@@ -5,6 +5,13 @@ const theme = {
   ...deep,
   styles: {
     ...deep.styles,
+    inlineCode: {
+      ...deep.styles.inlineCode,
+      bg: 'background',
+      border: '1px solid gray',
+      p: '.05rem',
+      borderRadius: '5px',
+    },
     CodeBlock: {
       overflow: `auto`,
       pre: {
@@ -45,7 +52,7 @@ const theme = {
       cursor: 'pointer',
       color: 'text',
       '&:hover': {
-        color: 'highlight',
+        color: 'secondary',
       },
       '&:focus-visible': {
         outline: 0,
@@ -63,7 +70,7 @@ const theme = {
       cursor: 'pointer',
       color: 'text',
       '&:hover': {
-        color: 'highlight',
+        color: 'secondary',
       },
       '&:focus-visible': {
         outline: 0,
@@ -79,7 +86,7 @@ const theme = {
       cursor: 'pointer',
       color: 'primary',
       '&:hover, &:focus, &:active': {
-        textDecoration: 'underline',
+        textDecoration: 'none',
         color: 'secondary',
       },
     },
