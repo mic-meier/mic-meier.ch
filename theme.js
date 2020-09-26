@@ -40,15 +40,45 @@ const theme = {
   },
   links: {
     nav: {
+      fontWeight: 'normal',
+      fontSize: 2,
+      cursor: 'pointer',
       color: 'text',
-      '&:hover, &:focus, &.active': {
+      '&:hover': {
         color: 'highlight',
       },
+      '&:focus-visible': {
+        outline: 0,
+        borderRadius: '3px',
+        boxShadow: (theme) => `0 0 0 2px ${theme.colors.primary}`,
+      },
+      px: 2,
+      py: 1,
+      display: 'block',
+      textDecoration: 'none',
+    },
+    navtitle: {
+      fontWeight: 'bold',
+      fontSize: 4,
+      cursor: 'pointer',
+      color: 'text',
+      '&:hover': {
+        color: 'highlight',
+      },
+      '&:focus-visible': {
+        outline: 0,
+        borderRadius: '3px',
+        boxShadow: (theme) => `0 0 0 2px ${theme.colors.primary}`,
+      },
+      px: 2,
+      py: 1,
+      margin: '0.5rem',
+      textDecoration: 'none',
     },
     blog: {
       cursor: 'pointer',
       color: 'primary',
-      '&:hover, &:focus, &.active': {
+      '&:hover, &:focus, &:active': {
         textDecoration: 'underline',
         color: 'secondary',
       },
@@ -63,6 +93,22 @@ const theme = {
       marginTop: '2rem',
     },
   },
+  spans: {
+    burger: {
+      height: '3px',
+      width: '100%',
+      backgroundColor: 'text',
+      borderRadius: '10px',
+    },
+  },
+  listItems: {
+    nav: {
+      listStyle: 'none',
+      listStylePosition: 'outside',
+    },
+  },
 }
+
+console.log('theme', theme)
 
 export default theme
