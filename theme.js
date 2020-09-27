@@ -14,12 +14,13 @@ const theme = {
     },
     CodeBlock: {
       overflow: `auto`,
+      mx: '-30px',
       pre: {
         backgroundColor: `transparent`,
         float: `left`,
         minWidth: `100%`,
         margin: 0,
-        padding: '1rem',
+        px: '30px',
         borderRadius: '10px',
       },
       highlightLine: {
@@ -116,5 +117,5 @@ const theme = {
     },
   },
 }
-console.log('theme', theme)
+
 export default theme

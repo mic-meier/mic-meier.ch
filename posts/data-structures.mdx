@@ -8,7 +8,7 @@ tagline: 'Learn the building blocks of a language'
 
 Values of type object are arbitrary collections of properties. They can be created using the Object() constructor, or more easily using the object initializer / literal syntax.
 
-```Javascript
+```javascript
 // Empty object using Object() constructor
 const myFirstObject = new Object()
 
@@ -26,16 +26,16 @@ Property names can be any string, but dot notation only works with valid binding
 
 Example:
 
-```Javascript
+```javascript
 const myObject = {
   one: 1,
-  2: "two",
-  "and three": 3
+  2: 'two',
+  'and three': 3,
 }
 
 // myObject.one -> 1
 // myObject["one] -> 1
-let x = "one"
+let x = 'one'
 // myObject[x] -> 1
 // myObject.x -> undefined
 
@@ -51,7 +51,7 @@ Elements in an array are stored as the array's properties, using numbers as prop
 
 An arrays length property sets or returns the number of element in that array.
 
-```Javascript
+```javascript
 const myArr = [1, 2, 3, 4, 5]
 // myArr.length -> 5
 myArr.length = 7
