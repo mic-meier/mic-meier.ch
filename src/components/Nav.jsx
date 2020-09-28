@@ -28,7 +28,6 @@ const Nav = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        // height: '100%',
         padding: '0em 1rem',
       }}
     >
